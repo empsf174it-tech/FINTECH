@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing — FINTECH Payments</title>
+  <meta name="description"
+    content="Simple, transparent pricing. A free plan that stays free, and a Premium plan with zero foreign exchange fees for $9.99 a month.">
+  <meta name="theme-color" content="#4F46E5">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script>
+    (function () {
+      var t = localStorage.getItem('theme');
+      var d = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (t === 'dark' || (!t && d)) document.documentElement.setAttribute('data-theme', 'dark');
+    })();
+  </script>
+  <!-- GA_TAG -->
+</head>
+
+<body>
+
+  <div class="scroll-progress"></div>
+
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-mark"><i class="ph-fill ph-lightning"></i></span> FINTECH
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="features.html" class="nav-link">Features</a>
+        <a href="pricing.html" class="nav-link active">Pricing</a>
+        <a href="how-it-works.html" class="nav-link">How it works</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-toggle" aria-label="Toggle theme"><i class="ph ph-moon"></i></button>
+        <a href="login.html" class="btn btn-primary btn-sm">Log in <i class="ph ph-arrow-right"></i></a>
+      </div>
+      <button class="hamburger" aria-label="Open menu"><i class="ph ph-list"></i></button>
+    </div>
+  </nav>
+
+  <div class="drawer-overlay"></div>
+  <div class="drawer-menu">
+    <button class="drawer-close" aria-label="Close menu"><i class="ph ph-x"></i></button>
+    <div class="drawer-nav-links">
+      <a href="index.html" class="drawer-nav-link">Home</a>
+      <a href="features.html" class="drawer-nav-link">Features</a>
+      <a href="pricing.html" class="drawer-nav-link active" aria-current="page">Pricing</a>
+      <a href="how-it-works.html" class="drawer-nav-link">How it works</a>
+      <a href="about.html" class="drawer-nav-link">About</a>
+      <a href="contact.html" class="drawer-nav-link">Contact</a>
+    </div>
+    <div class="drawer-actions">
+      <div class="drawer-theme">
+        <span>Appearance</span>
+        <button class="theme-toggle" aria-label="Toggle theme"><i class="ph ph-moon"></i></button>
+      </div>
+      <a href="login.html" class="btn btn-primary btn-block">Log in <i class="ph ph-arrow-right"></i></a>
+    </div>
+  </div>
+
+  <!-- ===================== HERO ===================== -->
+  <header class="hero grid-backdrop" style="padding-bottom: var(--spacing-12);">
+    <div class="orb orb-primary" style="width: 460px; height: 460px; top: -180px; left: 50%;"></div>
+    <div class="container">
+      <div class="section-head animate-slide-up" style="margin-bottom: 0;">
+        <span class="eyebrow"><i class="ph ph-tag"></i> Pricing</span>
+        <h1 class="mb-5">Simple, <span class="gradient-text">transparent</span> pricing</h1>
+        <p class="lead lead-center">
+          Two plans. No account fees, no minimum balance, no surprise charges on the statement.
+          The free plan is free forever, not free for twelve months.
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== PLANS ===================== -->
+  <section class="section" style="padding-top: var(--spacing-12);">
+    <div class="container">
+      <div class="grid grid-2 pricing-grid" style="max-width: 940px; margin: 0 auto; gap: var(--spacing-6);">
+
+        <div class="card pricing-card reveal">
+          <span class="icon-tile ink"><i class="ph ph-wallet"></i></span>
+          <h3 class="mb-2">Standard</h3>
+          <p style="font-size: var(--body-small);">Everything you need for everyday spending.</p>
+          <div class="pricing-price">$0<span> /month</span></div>
+          <a href="register.html" class="btn btn-outline btn-block mb-6">Get started free</a>
+          <div style="font-weight: 600; font-size: var(--body-small); margin-bottom: var(--spacing-2);">Included in
+            Standard</div>
+          <ul class="pricing-features">
+            <li><i class="ph-fill ph-check-circle"></i> Free peer-to-peer transfers</li>
+            <li><i class="ph-fill ph-check-circle"></i> Standard physical debit card</li>
+            <li><i class="ph-fill ph-check-circle"></i> 1 virtual card</li>
+            <li><i class="ph-fill ph-check-circle"></i> Basic budgeting and categorisation</li>
+            <li><i class="ph-fill ph-check-circle"></i> $500 fee-free ATM withdrawals a month</li>
+            <li><i class="ph-fill ph-check-circle"></i> 24/7 in-app support</li>
+          </ul>
+        </div>
+
+        <div class="card pricing-card featured reveal" data-delay="1">
+          <div class="pricing-badge">Most popular</div>
+          <span class="icon-tile solid"><i class="ph ph-crown-simple"></i></span>
+          <h3 class="mb-2">Premium</h3>
+          <p style="font-size: var(--body-small);">For people who travel, earn abroad, or both.</p>
+          <div class="pricing-price">$9.99<span> /month</span></div>
+          <a href="register.html" class="btn btn-primary btn-block mb-6">Go Premium <i
+              class="ph ph-arrow-right"></i></a>
+          <div style="font-weight: 600; font-size: var(--body-small); margin-bottom: var(--spacing-2);">Everything in
+            Standard, plus</div>
+          <ul class="pricing-features">
+            <li><i class="ph-fill ph-check-circle"></i> Exclusive brushed-metal card</li>
+            <li><i class="ph-fill ph-check-circle"></i> Unlimited virtual cards</li>
+            <li><i class="ph-fill ph-check-circle"></i> Zero foreign exchange fees</li>
+            <li><i class="ph-fill ph-check-circle"></i> Advanced analytics, goals and vaults</li>
+            <li><i class="ph-fill ph-check-circle"></i> $2,000 fee-free ATM withdrawals a month</li>
+            <li><i class="ph-fill ph-check-circle"></i> Priority support and travel insurance</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="trust-row reveal" data-delay="2" style="margin-top: var(--spacing-12);">
+        <span class="trust-pill"><i class="ph-fill ph-check-circle"></i> No credit check</span>
+        <span class="trust-pill"><i class="ph-fill ph-check-circle"></i> Cancel any time</span>
+        <span class="trust-pill"><i class="ph-fill ph-check-circle"></i> No minimum balance</span>
+        <span class="trust-pill"><i class="ph-fill ph-check-circle"></i> Funds safeguarded</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== WHAT YOU NEVER PAY ===================== -->
+  <section class="section section-bg-tint">
+    <div class="container">
+      <div class="split">
+        <div class="split-copy reveal reveal-left">
+          <span class="eyebrow"><i class="ph ph-prohibit"></i> The short list</span>
+          <h2 class="mb-5">Fees we don't charge</h2>
+          <p class="mb-8">Most of what banks earn from personal accounts sits in this list. Removing it was the entire
+            point of building FINTECH.</p>
+          <div class="grid grid-2 gap-4 fee-list">
+            <span class="trust-pill" style="justify-content: flex-start;"><i class="ph-fill ph-x-circle"
+                style="color: var(--error);"></i> Monthly account fee</span>
+            <span class="trust-pill" style="justify-content: flex-start;"><i class="ph-fill ph-x-circle"
+                style="color: var(--error);"></i> Exchange-rate markup</span>
+            <span class="trust-pill" style="justify-content: flex-start;"><i class="ph-fill ph-x-circle"
+                style="color: var(--error);"></i> Inactivity charges</span>
+            <span class="trust-pill" style="justify-content: flex-start;"><i class="ph-fill ph-x-circle"
+                style="color: var(--error);"></i> Card replacement fees</span>
+            <span class="trust-pill" style="justify-content: flex-start;"><i class="ph-fill ph-x-circle"
+                style="color: var(--error);"></i> Minimum balance </span>
+            <span class="trust-pill" style="justify-content: flex-start;"><i class="ph-fill ph-x-circle"
+                style="color: var(--error);"></i> Incoming transfer fees</span>
+          </div>
+        </div>
+        <div class="split-visual reveal reveal-right">
+          <div class="media media-4-3">
+            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1000&q=80"
+              alt="Reviewing statements and account costs" loading="lazy">
+          </div>
+          <div class="float-card" style="bottom: -26px; left: -20px;">
+            <span class="fc-icon"><i class="ph-fill ph-piggy-bank"></i></span>
+            <div>
+              <div class="fc-label">Average saved per year</div>
+              <div class="fc-value">$248</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PRICING FAQ ===================== -->
+  <section class="section">
+    <div class="container container-narrow">
+      <div class="section-head reveal">
+        <span class="eyebrow"><i class="ph ph-question"></i> Pricing questions</span>
+        <h2>Before you pick a plan</h2>
+      </div>
+
+      <div class="accordion reveal" data-delay="1">
+        <div class="acc-item">
+          <button class="acc-head" type="button" aria-expanded="false">
+            Is the Standard plan really free forever?
+            <span class="acc-icon"><i class="ph ph-plus"></i></span>
+          </button>
+          <div class="acc-body">
+            <div class="acc-body-inner">
+              Yes. There is no monthly fee, no minimum balance and no introductory period that quietly ends. We earn on
+              interchange and on Premium subscriptions, which is why the free plan can stay genuinely free.
+            </div>
+          </div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head" type="button" aria-expanded="false">
+            Can I switch plans or cancel later?
+            <span class="acc-icon"><i class="ph ph-plus"></i></span>
+          </button>
+          <div class="acc-body">
+            <div class="acc-body-inner">
+              Switch either direction at any time from the app. Upgrades take effect immediately and are pro-rated;
+              downgrades take effect at the end of the current billing month, and your account stays open either way.
+            </div>
+          </div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head" type="button" aria-expanded="false">
+            What happens after my fee-free ATM allowance?
+            <span class="acc-icon"><i class="ph ph-plus"></i></span>
+          </button>
+          <div class="acc-body">
+            <div class="acc-body-inner">
+              Withdrawals beyond the monthly allowance carry a 2% fee, shown on screen before you confirm at the
+              machine. The allowance resets on the first of each month, and the app tells you how much is left.
+            </div>
+          </div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head" type="button" aria-expanded="false">
+            Do you offer business accounts?
+            <span class="acc-icon"><i class="ph ph-plus"></i></span>
+          </button>
+          <div class="acc-body">
+            <div class="acc-body-inner">
+              Yes — business accounts add multi-user roles, granular spend permissions, batch payouts and accounting
+              exports. Pricing depends on payout volume, so get in touch and we'll quote it plainly.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA ===================== -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="cta-band reveal reveal-scale">
+        <h2 class="mb-5">Start on the free plan</h2>
+        <p class="lead lead-center mb-8" style="color: rgba(255,255,255,.75);">
+          Upgrade only if you actually need the extras. Most people never do.
+        </p>
+        <div class="btn-group" style="justify-content: center;">
+          <a href="register.html" class="btn btn-light btn-lg">Create your free account <i
+              class="ph ph-arrow-right"></i></a>
+          <a href="contact.html" class="btn btn-on-ink btn-lg">Talk to sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="footer-logo">
+            <span class="logo-mark"><i class="ph-fill ph-lightning"></i></span> FINTECH
+          </a>
+          <p style="max-width: 320px;">Modern financial tools for the borderless economy. Secure, fast, and honest about
+            pricing.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="X"><i class="ph ph-x-logo"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+            <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+            <a href="#" aria-label="GitHub"><i class="ph ph-github-logo"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4>Product</h4>
+          <div class="footer-links">
+            <a href="features.html" class="footer-link">Features</a>
+            <a href="pricing.html" class="footer-link">Pricing</a>
+            <a href="how-it-works.html" class="footer-link">How it works</a>
+            <a href="register.html" class="footer-link">Create account</a>
+          </div>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <div class="footer-links">
+            <a href="about.html" class="footer-link">About us</a>
+            <a href="contact.html" class="footer-link">Contact</a>
+            <a href="contact.html" class="footer-link">Careers</a>
+            <a href="contact.html" class="footer-link">Press</a>
+          </div>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <div class="footer-links">
+            <a href="#" class="footer-link">Terms of service</a>
+            <a href="#" class="footer-link">Privacy policy</a>
+            <a href="#" class="footer-link">Cookie policy</a>
+            <a href="#" class="footer-link">Complaints</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-disclosure">FINTECH is a placeholder financial services brand created for demonstration
+          purposes. It is not a real financial institution, and all rates, figures, licences and tools shown on this
+          site are illustrative only.</p>
+        <p>&copy; 2026 FINTECH Payments. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Back to top"><i class="ph ph-arrow-up"></i></button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

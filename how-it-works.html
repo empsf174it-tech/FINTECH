@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How It Works — FINTECH Payments</title>
+  <meta name="description" content="Open a FINTECH account in about three minutes. No paperwork, no branch visit — sign up, verify, and start spending.">
+  <meta name="theme-color" content="#4F46E5">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script>
+    (function () {
+      var t = localStorage.getItem('theme');
+      var d = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (t === 'dark' || (!t && d)) document.documentElement.setAttribute('data-theme', 'dark');
+    })();
+  </script>
+  <!-- GA_TAG -->
+</head>
+<body>
+
+  <div class="scroll-progress"></div>
+
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-mark"><i class="ph-fill ph-lightning"></i></span> FINTECH
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="features.html" class="nav-link">Features</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="how-it-works.html" class="nav-link active">How it works</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-toggle" aria-label="Toggle theme"><i class="ph ph-moon"></i></button>
+        <a href="login.html" class="btn btn-primary btn-sm">Log in <i class="ph ph-arrow-right"></i></a>
+      </div>
+      <button class="hamburger" aria-label="Open menu"><i class="ph ph-list"></i></button>
+    </div>
+  </nav>
+
+  <div class="drawer-overlay"></div>
+  <div class="drawer-menu">
+    <button class="drawer-close" aria-label="Close menu"><i class="ph ph-x"></i></button>
+    <div class="drawer-nav-links">
+      <a href="index.html" class="drawer-nav-link">Home</a>
+      <a href="features.html" class="drawer-nav-link">Features</a>
+      <a href="pricing.html" class="drawer-nav-link">Pricing</a>
+      <a href="how-it-works.html" class="drawer-nav-link active" aria-current="page">How it works</a>
+      <a href="about.html" class="drawer-nav-link">About</a>
+      <a href="contact.html" class="drawer-nav-link">Contact</a>
+    </div>
+    <div class="drawer-actions">
+      <div class="drawer-theme">
+        <span>Appearance</span>
+        <button class="theme-toggle" aria-label="Toggle theme"><i class="ph ph-moon"></i></button>
+      </div>
+      <a href="login.html" class="btn btn-primary btn-block">Log in <i class="ph ph-arrow-right"></i></a>
+    </div>
+  </div>
+
+  <!-- ===================== HERO ===================== -->
+  <header class="hero grid-backdrop" style="padding-bottom: var(--spacing-16);">
+    <div class="orb orb-accent" style="width: 420px; height: 420px; top: -160px; right: 10%;"></div>
+    <div class="container">
+      <div class="section-head animate-slide-up" style="margin-bottom: 0;">
+        <span class="eyebrow"><i class="ph ph-lightning"></i> Fast setup</span>
+        <h1 class="mb-5">Get started in <span class="gradient-text">three minutes</span></h1>
+        <p class="lead lead-center">
+          No paperwork, no branch visit, no waiting for a letter in the post.
+          Three steps, entirely from your phone.
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== STEPS ===================== -->
+  <section class="section section-bg-tint">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow"><i class="ph ph-list-numbers"></i> The process</span>
+        <h2>Three steps, start to spending</h2>
+      </div>
+
+      <div class="grid grid-3 step-grid">
+        <div class="card step-card reveal" data-delay="1" style="align-items: flex-start; text-align: left;">
+          <span class="step-num">1</span>
+          <span class="icon-tile"><i class="ph ph-user-plus"></i></span>
+          <h3 class="mb-3" style="font-size: 1.4rem;">Create your account</h3>
+          <p style="font-size: var(--body-small);">Sign up on the web or in the app with your name, email and phone number. That's the whole form — about forty seconds.</p>
+        </div>
+        <div class="card step-card reveal" data-delay="2" style="align-items: flex-start; text-align: left;">
+          <span class="step-num">2</span>
+          <span class="icon-tile accent"><i class="ph ph-identification-card"></i></span>
+          <h3 class="mb-3" style="font-size: 1.4rem;">Verify your identity</h3>
+          <p style="font-size: var(--body-small);">Photograph your ID and take a quick selfie. Automated checks clear most accounts in under ninety seconds.</p>
+        </div>
+        <div class="card step-card reveal" data-delay="3" style="align-items: flex-start; text-align: left;">
+          <span class="step-num">3</span>
+          <span class="icon-tile"><i class="ph ph-money"></i></span>
+          <h3 class="mb-3" style="font-size: 1.4rem;">Fund and spend</h3>
+          <p style="font-size: var(--body-small);">Link a bank account or card to top up. Your virtual card works immediately; the physical one arrives within a week.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== DETAIL SPLITS ===================== -->
+  <section class="section">
+    <div class="container" style="display: flex; flex-direction: column; gap: var(--spacing-24);">
+
+      <div class="split reveal">
+        <div class="split-visual">
+          <div class="media media-4-3">
+            <img src="https://images.unsplash.com/photo-1563237023-b1e970526dcb?auto=format&fit=crop&w=1000&q=80" alt="Customer completing a selfie identity check" loading="lazy">
+          </div>
+          <div class="float-card" style="bottom: -26px; right: -18px;">
+            <span class="fc-icon"><i class="ph-fill ph-check-circle"></i></span>
+            <div>
+              <div class="fc-label">Median verification</div>
+              <div class="fc-value">88 seconds</div>
+            </div>
+          </div>
+        </div>
+        <div class="split-copy">
+          <span class="chip mb-4"><i class="ph ph-shield-check"></i> Verification</span>
+          <h2 class="mb-5">Checked properly, without the queue</h2>
+          <p class="mb-6">Identity verification is a regulatory requirement, and it's also what keeps other people out of your account. We do it with automated document and liveness checks rather than a branch appointment.</p>
+          <ul class="check-list">
+            <li><i class="ph-fill ph-check-circle"></i> Passport, driving licence or national ID accepted</li>
+            <li><i class="ph-fill ph-check-circle"></i> Documents encrypted and never shared with third parties</li>
+            <li><i class="ph-fill ph-check-circle"></i> Manual review within two hours if anything is unclear</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="split reveal">
+        <div class="split-copy">
+          <span class="chip accent mb-4"><i class="ph ph-bank"></i> Funding</span>
+          <h2 class="mb-5">Money in, immediately usable</h2>
+          <p class="mb-6">Top up by bank transfer, debit card or open banking link. Card top-ups land instantly; bank transfers clear within minutes on local rails, and your balance is spendable the moment it arrives.</p>
+          <ul class="check-list">
+            <li><i class="ph-fill ph-check-circle"></i> No fee on incoming transfers, in any currency</li>
+            <li><i class="ph-fill ph-check-circle"></i> Direct salary deposits supported in 22 countries</li>
+            <li><i class="ph-fill ph-check-circle"></i> Auto top-up rules when a balance runs low</li>
+          </ul>
+        </div>
+        <div class="split-visual">
+          <div class="media media-4-3">
+            <img src="https://images.unsplash.com/photo-1633158829585-23ba8f7c8caf?auto=format&fit=crop&w=1000&q=80" alt="Adding funds to a FINTECH account" loading="lazy">
+          </div>
+          <div class="float-card" style="top: -24px; right: -20px;">
+            <span class="fc-icon primary"><i class="ph-fill ph-arrow-circle-down"></i></span>
+            <div>
+              <div class="fc-label">First top-up</div>
+              <div class="fc-value">Instant</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== CTA ===================== -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="cta-band reveal reveal-scale">
+        <span class="chip accent mb-6" style="background: rgba(52,211,153,.16); border-color: rgba(52,211,153,.3); color: #6EE7B7;">
+          <span class="live-dot"></span> Average setup time: 3 min 12 s
+        </span>
+        <h2 class="mb-5">Ready to upgrade your wallet?</h2>
+        <p class="lead lead-center mb-8" style="color: rgba(255,255,255,.75);">
+          It's free to join, there's nothing to cancel, and your first transfer can happen today.
+        </p>
+        <div class="btn-group" style="justify-content: center;">
+          <a href="register.html" class="btn btn-light btn-lg">Create your account <i class="ph ph-arrow-right"></i></a>
+          <a href="features.html" class="btn btn-on-ink btn-lg">Explore the features</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="footer-logo">
+            <span class="logo-mark"><i class="ph-fill ph-lightning"></i></span> FINTECH
+          </a>
+          <p style="max-width: 320px;">Modern financial tools for the borderless economy. Secure, fast, and honest about pricing.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="X"><i class="ph ph-x-logo"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+            <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+            <a href="#" aria-label="GitHub"><i class="ph ph-github-logo"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4>Product</h4>
+          <div class="footer-links">
+            <a href="features.html" class="footer-link">Features</a>
+            <a href="pricing.html" class="footer-link">Pricing</a>
+            <a href="how-it-works.html" class="footer-link">How it works</a>
+            <a href="register.html" class="footer-link">Create account</a>
+          </div>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <div class="footer-links">
+            <a href="about.html" class="footer-link">About us</a>
+            <a href="contact.html" class="footer-link">Contact</a>
+            <a href="contact.html" class="footer-link">Careers</a>
+            <a href="contact.html" class="footer-link">Press</a>
+          </div>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <div class="footer-links">
+            <a href="#" class="footer-link">Terms of service</a>
+            <a href="#" class="footer-link">Privacy policy</a>
+            <a href="#" class="footer-link">Cookie policy</a>
+            <a href="#" class="footer-link">Complaints</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-disclosure">FINTECH is a placeholder financial services brand created for demonstration purposes. It is not a real financial institution, and all rates, figures, licences and tools shown on this site are illustrative only.</p>
+        <p>&copy; 2026 FINTECH Payments. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Back to top"><i class="ph ph-arrow-up"></i></button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

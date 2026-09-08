@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page not found — FINTECH Payments</title>
+  <meta name="description" content="404 — the page you were looking for doesn't exist.">
+  <meta name="theme-color" content="#4F46E5">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script>
+    (function () {
+      var t = localStorage.getItem('theme');
+      var d = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (t === 'dark' || (!t && d)) document.documentElement.setAttribute('data-theme', 'dark');
+    })();
+  </script>
+  <!-- GA_TAG -->
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-mark"><i class="ph-fill ph-lightning"></i></span> FINTECH
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="features.html" class="nav-link">Features</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="how-it-works.html" class="nav-link">How it works</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-toggle" aria-label="Toggle theme"><i class="ph ph-moon"></i></button>
+        <a href="login.html" class="btn btn-primary btn-sm">Log in <i class="ph ph-arrow-right"></i></a>
+      </div>
+      <button class="hamburger" aria-label="Open menu"><i class="ph ph-list"></i></button>
+    </div>
+  </nav>
+
+  <div class="drawer-overlay"></div>
+  <div class="drawer-menu">
+    <button class="drawer-close" aria-label="Close menu"><i class="ph ph-x"></i></button>
+    <div class="drawer-nav-links">
+      <a href="index.html" class="drawer-nav-link">Home</a>
+      <a href="features.html" class="drawer-nav-link">Features</a>
+      <a href="pricing.html" class="drawer-nav-link">Pricing</a>
+      <a href="how-it-works.html" class="drawer-nav-link">How it works</a>
+      <a href="about.html" class="drawer-nav-link">About</a>
+      <a href="contact.html" class="drawer-nav-link">Contact</a>
+    </div>
+    <div class="drawer-actions">
+      <div class="drawer-theme">
+        <span>Appearance</span>
+        <button class="theme-toggle" aria-label="Toggle theme"><i class="ph ph-moon"></i></button>
+      </div>
+      <a href="login.html" class="btn btn-primary btn-block">Log in <i class="ph ph-arrow-right"></i></a>
+    </div>
+  </div>
+
+  <main class="not-found-layout grid-backdrop">
+    <div class="orb orb-primary" style="width: 460px; height: 460px; top: -120px; left: 50%; transform: translateX(-50%);"></div>
+
+    <div class="z-1 animate-slide-up" style="max-width: 560px;">
+      <span class="chip mb-6"><i class="ph ph-compass"></i> Lost in transit</span>
+      <div class="not-found-number">404</div>
+      <h2 class="mb-4">This page didn't settle</h2>
+      <p class="lead lead-center mb-8">
+        The page you're looking for doesn't exist, or it moved somewhere better.
+        Your money, meanwhile, is exactly where you left it.
+      </p>
+      <div class="btn-group" style="justify-content: center;">
+        <a href="index.html" class="btn btn-primary btn-lg">Back to homepage <i class="ph ph-arrow-right"></i></a>
+        <a href="contact.html" class="btn btn-outline btn-lg">Report a broken link</a>
+      </div>
+
+      <div class="trust-row mt-12">
+        <a href="features.html" class="trust-pill"><i class="ph ph-stack"></i> Features</a>
+        <a href="pricing.html" class="trust-pill"><i class="ph ph-tag"></i> Pricing</a>
+        <a href="how-it-works.html" class="trust-pill"><i class="ph ph-lightning"></i> How it works</a>
+        <a href="about.html" class="trust-pill"><i class="ph ph-buildings"></i> About</a>
+      </div>
+    </div>
+  </main>
+
+  <button class="back-to-top" aria-label="Back to top"><i class="ph ph-arrow-up"></i></button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

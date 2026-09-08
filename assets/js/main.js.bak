@@ -1,0 +1,220 @@
+// main.js - Fintech Payments Global Interactions
+
+document.addEventListener('DOMContentLoaded', () => {
+  initThemeToggle();
+  initMobileDrawer();
+  initFormValidation();
+  // We can add simple parallax or scroll-based animations if needed here
+});
+
+// Theme Toggle
+function initThemeToggle() {
+  const html = document.documentElement;
+  const toggles = document.querySelectorAll('.theme-toggle');
+  
+  // Default to system preference or saved preference
+  const savedTheme = localStorage.getItem('theme');
+  const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  
+  if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+    html.setAttribute('data-theme', 'dark');
+    updateToggleIcons('dark');
+  } else {
+    html.removeAttribute('data-theme');
+    updateToggleIcons('light');
+  }
+
+  toggles.forEach(toggle => {
+    toggle.addEventListener('click', () => {
+      if (html.getAttribute('data-theme') === 'dark') {
+        html.removeAttribute('data-theme');
+        localStorage.setItem('theme', 'light');
+        updateToggleIcons('light');
+      } else {
+        html.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+        updateToggleIcons('dark');
+      }
+    });
+  });
+}
+
+function updateToggleIcons(theme) {
+  const toggles = document.querySelectorAll('.theme-toggle i');
+  toggles.forEach(icon => {
+    if (theme === 'dark') {
+      icon.className = 'ph ph-sun';
+    } else {
+      icon.className = 'ph ph-moon';
+    }
+  });
+}
+
+// Mobile Drawer
+function initMobileDrawer() {
+  const hamburger = document.querySelector('.hamburger');
+  const drawerOverlay = document.querySelector('.drawer-overlay');
+  const drawerMenu = document.querySelector('.drawer-menu');
+  const drawerClose = document.querySelector('.drawer-close');
+
+  if (!hamburger || !drawerOverlay || !drawerMenu || !drawerClose) return;
+
+  const openDrawer = () => {
+    drawerOverlay.classList.add('active');
+    drawerMenu.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Prevent scrolling
+  };
+
+  const closeDrawer = () => {
+    drawerOverlay.classList.remove('active');
+    drawerMenu.classList.remove('active');
+    document.body.style.overflow = '';
+  };
+
+  hamburger.addEventListener('click', openDrawer);
+  drawerClose.addEventListener('click', closeDrawer);
+  drawerOverlay.addEventListener('click', closeDrawer);
+}
+
+// Form Validation
+function initFormValidation() {
+  const forms = document.querySelectorAll('form[data-validate]');
+  
+  forms.forEach(form => {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault(); // Prevent default submit for validation
+      
+      let isValid = true;
+      const inputs = form.querySelectorAll('input[required], textarea[required]');
+      
+      inputs.forEach(input => {
+        if (!validateInput(input)) {
+          isValid = false;
+        }
+      });
+      
+      // Special logic for password match
+      const password = form.querySelector('input[name="password"]');
+      const confirmPassword = form.querySelector('input[name="confirmPassword"]');
+      
+      if (password && confirmPassword) {
+        if (password.value !== confirmPassword.value) {
+          showError(confirmPassword, 'Passwords do not match');
+          isValid = false;
+        } else if (confirmPassword.value) {
+          showSuccess(confirmPassword);
+        }
+      }
+      
+      // Terms checkbox check
+      const terms = form.querySelector('input[name="terms"]');
+      if (terms && !terms.checked) {
+        isValid = false;
+        // Simple alert or custom error for terms
+        const termsLabel = terms.closest('.checkbox-group');
+        if (termsLabel) {
+           let msg = termsLabel.querySelector('.error-msg');
+           if(!msg) {
+               msg = document.createElement('span');
+               msg.className = 'error-msg';
+               termsLabel.appendChild(msg);
+           }
+           msg.textContent = "You must agree to the terms.";
+           msg.style.display = 'block';
+        }
+      } else if (terms && terms.checked) {
+         const termsLabel = terms.closest('.checkbox-group');
+         if(termsLabel) {
+             const msg = termsLabel.querySelector('.error-msg');
+             if(msg) msg.style.display = 'none';
+         }
+      }
+      
+      if (isValid) {
+        // Here you would normally submit to backend or Formspree
+        // e.g., form.submit();
+        
+        // Mock success message inline
+        const successMsg = document.createElement('div');
+        successMsg.className = 'trust-badge mb-4';
+        successMsg.innerHTML = '<i class="ph ph-check-circle"></i> Success! Submitted correctly.';
+        form.prepend(successMsg);
+        
+        // Reset form
+        form.reset();
+        inputs.forEach(input => {
+          input.classList.remove('success');
+        });
+      }
+    });
+    
+    // Live validation on blur
+    const inputs = form.querySelectorAll('input[required], textarea[required]');
+    inputs.forEach(input => {
+      input.addEventListener('blur', () => {
+        validateInput(input);
+      });
+      input.addEventListener('input', () => {
+        input.classList.remove('error');
+        const err = input.parentElement.querySelector('.error-msg');
+        if(err) err.style.display = 'none';
+      });
+    });
+  });
+}
+
+function validateInput(input) {
+  const type = input.getAttribute('type');
+  let valid = true;
+  let message = 'This field is required';
+
+  if (!input.value.trim()) {
+    valid = false;
+  } else if (type === 'email') {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!regex.test(input.value)) {
+      valid = false;
+      message = 'Please enter a valid email address';
+    }
+  } else if (type === 'password') {
+    if (input.value.length < 8) {
+      valid = false;
+      message = 'Password must be at least 8 characters';
+    }
+  } else if (type === 'number' || input.dataset.numeric) {
+      if(isNaN(input.value) || Number(input.value) <= 0) {
+          valid = false;
+          message = 'Please enter a valid amount';
+      }
+  }
+
+  if (!valid) {
+    showError(input, message);
+  } else {
+    showSuccess(input);
+  }
+  
+  return valid;
+}
+
+function showError(input, message) {
+  input.classList.add('error');
+  input.classList.remove('success');
+  let err = input.parentElement.querySelector('.error-msg');
+  if (!err) {
+    err = document.createElement('span');
+    err.className = 'error-msg';
+    input.parentElement.appendChild(err);
+  }
+  err.textContent = message;
+  err.style.display = 'block';
+}
+
+function showSuccess(input) {
+  input.classList.remove('error');
+  input.classList.add('success');
+  let err = input.parentElement.querySelector('.error-msg');
+  if (err) {
+    err.style.display = 'none';
+  }
+}
