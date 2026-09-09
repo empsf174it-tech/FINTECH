@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FINTECH Payments — Money that moves at the speed of you</title>
-  <meta name="description" content="Premium digital payments and financial management. Send money globally in seconds with bank-grade security, transparent pricing, and zero hidden fees.">
+  <meta name="description"
+    content="Premium digital payments and financial management. Send money globally in seconds with bank-grade security, transparent pricing, and zero hidden fees.">
   <meta name="theme-color" content="#4F46E5">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="icon" href="favicon.ico" sizes="32x32">
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/images/favicon.ico" sizes="32x32">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
   <link rel="stylesheet" href="assets/css/style.css">
@@ -24,6 +26,7 @@
   </script>
   <!-- GA_TAG -->
 </head>
+
 <body>
 
   <div class="scroll-progress"></div>
@@ -102,17 +105,27 @@
           </p>
 
           <div class="btn-group mb-8">
-            <a href="register.html" class="btn btn-primary btn-lg">Open your account <i class="ph ph-arrow-right"></i></a>
-            <a href="how-it-works.html" class="btn btn-secondary btn-lg"><i class="ph ph-play-circle"></i> See how it works</a>
+            <a href="register.html" class="btn btn-primary btn-lg">Open your account <i
+                class="ph ph-arrow-right"></i></a>
+            <a href="how-it-works.html" class="btn btn-secondary btn-lg"><i class="ph ph-play-circle"></i> See how it
+              works</a>
           </div>
 
           <div class="hero-trust">
             <div class="flex items-center gap-4">
               <div class="avatar-stack">
-                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=facearea&facepad=3&w=140&h=140&q=80" alt="Customer portrait" loading="lazy">
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=facearea&facepad=3&w=140&h=140&q=80" alt="Customer portrait" loading="lazy">
-                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=facearea&facepad=3&w=140&h=140&q=80" alt="Customer portrait" loading="lazy">
-                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=facearea&facepad=3&w=140&h=140&q=80" alt="Customer portrait" loading="lazy">
+                <img
+                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=facearea&facepad=3&w=140&h=140&q=80"
+                  alt="Customer portrait" loading="lazy">
+                <img
+                  src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=facearea&facepad=3&w=140&h=140&q=80"
+                  alt="Customer portrait" loading="lazy">
+                <img
+                  src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=facearea&facepad=3&w=140&h=140&q=80"
+                  alt="Customer portrait" loading="lazy">
+                <img
+                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=facearea&facepad=3&w=140&h=140&q=80"
+                  alt="Customer portrait" loading="lazy">
               </div>
               <div class="trust-copy">
                 <span class="stars">★★★★★</span>
@@ -129,14 +142,16 @@
             <div class="conv-head">
               <div>
                 <div class="conv-title">Send money</div>
-                <div style="font-size: var(--body-xs); color: var(--text-tertiary);">Try it — the numbers update live</div>
+                <div style="font-size: var(--body-xs); color: var(--text-tertiary);">Try it — the numbers update live
+                </div>
               </div>
               <span class="conv-live"><span class="live-dot"></span> Live rate</span>
             </div>
 
             <div class="conv-field">
               <label for="conv-amount">You send</label>
-              <input type="number" id="conv-amount" class="conv-amount" value="1000" min="0" step="10" inputmode="decimal" aria-label="Amount you send">
+              <input type="number" id="conv-amount" class="conv-amount" value="1000" min="0" step="10"
+                inputmode="decimal" aria-label="Amount you send">
               <span class="conv-cur">
                 <span class="flag" data-flag="from">🇺🇸</span>
                 <select id="conv-from" aria-label="Currency you send">
@@ -155,13 +170,15 @@
 
             <div class="conv-swap">
               <span class="conv-swap-line"></span>
-              <button class="swap-btn" type="button" data-swap aria-label="Swap currencies"><i class="ph ph-arrows-down-up"></i></button>
+              <button class="swap-btn" type="button" data-swap aria-label="Swap currencies"><i
+                  class="ph ph-arrows-down-up"></i></button>
               <span class="conv-swap-line"></span>
             </div>
 
             <div class="conv-field readonly">
               <label for="conv-result">Recipient gets</label>
-              <input type="text" id="conv-result" class="conv-amount conv-out" value="0" readonly aria-label="Amount the recipient gets">
+              <input type="text" id="conv-result" class="conv-amount conv-out" value="0" readonly
+                aria-label="Amount the recipient gets">
               <span class="conv-cur">
                 <span class="flag" data-flag="to">🇮🇳</span>
                 <select id="conv-to" aria-label="Currency received">
@@ -185,8 +202,10 @@
               <div class="conv-row total"><span>Total to pay</span><span data-total>—</span></div>
             </div>
 
-            <a href="register.html" class="btn btn-primary btn-block">Send this transfer <i class="ph ph-arrow-right"></i></a>
-            <p style="font-size: var(--body-xs); color: var(--text-tertiary); text-align: center; margin-top: var(--spacing-4);">
+            <a href="register.html" class="btn btn-primary btn-block">Send this transfer <i
+                class="ph ph-arrow-right"></i></a>
+            <p
+              style="font-size: var(--body-xs); color: var(--text-tertiary); text-align: center; margin-top: var(--spacing-4);">
               Indicative rates for demonstration only.
             </p>
           </div>
@@ -198,7 +217,8 @@
   <!-- ===================== TRUSTED BY ===================== -->
   <section class="section-sm" style="padding-top: 0;">
     <div class="container">
-      <p class="text-center" style="font-size: var(--body-xs); text-transform: uppercase; letter-spacing: var(--tracking-wide); color: var(--text-tertiary); font-weight: 700; margin-bottom: var(--spacing-8);">
+      <p class="text-center"
+        style="font-size: var(--body-xs); text-transform: uppercase; letter-spacing: var(--tracking-wide); color: var(--text-tertiary); font-weight: 700; margin-bottom: var(--spacing-8);">
         Powering finance teams at
       </p>
       <div class="marquee">
@@ -272,14 +292,14 @@
             </button>
           </div>
         </div>
-
         <!-- Transfers -->
         <div class="tab-panel active" data-panel="transfers" role="tabpanel">
           <div class="split">
             <div class="split-copy">
               <span class="chip mb-4"><i class="ph ph-lightning"></i> Settles in seconds</span>
               <h3 class="mb-4">Global transfers without the waiting room</h3>
-              <p class="mb-6">Pay anyone in 50+ currencies at the real mid-market rate. Track every leg of the journey in real time, from initiation to the moment it lands.</p>
+              <p class="mb-6">Pay anyone in 50+ currencies at the real mid-market rate. Track every leg of the journey
+                in real time, from initiation to the moment it lands.</p>
               <ul class="check-list mb-8">
                 <li><i class="ph-fill ph-check-circle"></i> Free instant transfers between FINTECH accounts</li>
                 <li><i class="ph-fill ph-check-circle"></i> Local rails in 38 countries — no correspondent delays</li>
@@ -289,7 +309,7 @@
             </div>
             <div class="split-visual">
               <div class="media media-4-3" data-tilt="4">
-                <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1000&q=80" alt="Contactless payment at a card terminal">
+                <img src="assets/images/transfers-tab-visual.jpg" alt="Contactless payment at a card terminal">
               </div>
               <div class="float-card" style="bottom: -26px; left: -22px;">
                 <span class="fc-icon"><i class="ph-fill ph-check-circle"></i></span>
@@ -308,7 +328,8 @@
             <div>
               <span class="chip accent mb-4"><i class="ph ph-shield-check"></i> Disposable by default</span>
               <h3 class="mb-4">Cards that adapt to how you spend</h3>
-              <p class="mb-6">Spin up a single-use virtual card for every subscription, or carry the brushed-metal card that pays in whichever currency you're standing in.</p>
+              <p class="mb-6">Spin up a single-use virtual card for every subscription, or carry the brushed-metal card
+                that pays in whichever currency you're standing in.</p>
               <ul class="check-list mb-8">
                 <li><i class="ph-fill ph-check-circle"></i> Unlimited virtual cards with per-merchant limits</li>
                 <li><i class="ph-fill ph-check-circle"></i> Freeze, unfreeze, and reissue in one tap</li>
@@ -318,7 +339,8 @@
             </div>
             <div class="split-visual">
               <div class="media media-4-3" data-tilt="4">
-                <img src="https://images.unsplash.com/photo-1613243555988-441166d4d6fd?auto=format&fit=crop&w=1000&q=80" alt="A contactless FINTECH payment card">
+                <img src="https://images.unsplash.com/photo-1613243555988-441166d4d6fd?auto=format&fit=crop&w=1000&q=80"
+                  alt="A contactless FINTECH payment card">
               </div>
               <div class="float-card" style="top: -24px; right: -20px;">
                 <span class="fc-icon primary"><i class="ph-fill ph-snowflake"></i></span>
@@ -337,7 +359,8 @@
             <div class="split-copy">
               <span class="chip mb-4"><i class="ph ph-sparkle"></i> Automatic categorisation</span>
               <h3 class="mb-4">Know exactly where the money went</h3>
-              <p class="mb-6">Every transaction is enriched, categorised and charted the second it clears — so your monthly review takes thirty seconds, not an afternoon.</p>
+              <p class="mb-6">Every transaction is enriched, categorised and charted the second it clears — so your
+                monthly review takes thirty seconds, not an afternoon.</p>
 
               <div class="spend-list mb-8">
                 <div class="spend-item">
@@ -374,7 +397,8 @@
             </div>
             <div class="split-visual">
               <div class="media media-4-3" data-tilt="4">
-                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80" alt="Analytics dashboard with spending charts">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80"
+                  alt="Analytics dashboard with spending charts">
               </div>
               <div class="float-card" style="bottom: -26px; right: -20px;">
                 <span class="fc-icon"><i class="ph-fill ph-trend-down"></i></span>
@@ -393,7 +417,8 @@
             <div class="split-copy">
               <span class="chip accent mb-4"><i class="ph ph-users-three"></i> Built for teams</span>
               <h3 class="mb-4">Run payroll, expenses and vendors in one place</h3>
-              <p class="mb-6">Give every team a budget, every contractor a payment rail, and every accountant a clean export. Approvals happen where the work already lives.</p>
+              <p class="mb-6">Give every team a budget, every contractor a payment rail, and every accountant a clean
+                export. Approvals happen where the work already lives.</p>
               <ul class="check-list mb-8">
                 <li><i class="ph-fill ph-check-circle"></i> Multi-user roles with granular permissions</li>
                 <li><i class="ph-fill ph-check-circle"></i> Batch payouts to 1,000 recipients per upload</li>
@@ -403,7 +428,8 @@
             </div>
             <div class="split-visual">
               <div class="media media-4-3" data-tilt="4">
-                <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1000&q=80" alt="Finance team reviewing accounts together">
+                <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1000&q=80"
+                  alt="Finance team reviewing accounts together">
               </div>
               <div class="float-card" style="top: -24px; left: -22px;">
                 <span class="fc-icon primary"><i class="ph-fill ph-users-three"></i></span>
@@ -425,7 +451,8 @@
       <div class="split">
         <div class="split-visual reveal reveal-left">
           <div class="media media-3-2">
-            <img src="https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?auto=format&fit=crop&w=1000&q=80" alt="Mobile banking app showing an outgoing transfer" loading="lazy">
+            <img src="assets/images/story-split-visual.jpg" alt="Mobile banking app showing an outgoing transfer"
+              loading="lazy">
           </div>
           <div class="float-card" style="bottom: -30px; right: -18px;">
             <span class="fc-icon primary"><i class="ph-fill ph-globe-hemisphere-west"></i></span>
@@ -439,16 +466,20 @@
         <div class="split-copy reveal reveal-right">
           <span class="eyebrow"><i class="ph ph-compass"></i> Why we built this</span>
           <h2 class="mb-5">Built for a borderless economy</h2>
-          <p class="mb-4">Moving money should feel like sending a message: immediate, obvious, and free of ceremony. We rebuilt the payment stack from the rails up to make that the default rather than the exception.</p>
-          <p class="mb-8">No correspondent-bank roulette. No exchange-rate markup buried three screens deep. Just one account that behaves the same whether you're paying rent or paying a supplier on another continent.</p>
+          <p class="mb-4">Moving money should feel like sending a message: immediate, obvious, and free of ceremony. We
+            rebuilt the payment stack from the rails up to make that the default rather than the exception.</p>
+          <p class="mb-8">No correspondent-bank roulette. No exchange-rate markup buried three screens deep. Just one
+            account that behaves the same whether you're paying rent or paying a supplier on another continent.</p>
 
           <div class="grid grid-2 gap-6 mb-8">
             <div>
-              <div class="stat-num stat-plain" style="font-size: 2rem;"><span data-count="0" data-suffix="">0</span></div>
+              <div class="stat-num stat-plain" style="font-size: 2rem;"><span data-count="0" data-suffix="">0</span>
+              </div>
               <div class="stat-label" style="color: var(--text-secondary);">Hidden fees, by design</div>
             </div>
             <div>
-              <div class="stat-num stat-plain" style="font-size: 2rem;"><span data-count="1.8" data-decimals="1" data-suffix="s">0</span></div>
+              <div class="stat-num stat-plain" style="font-size: 2rem;"><span data-count="1.8" data-decimals="1"
+                  data-suffix="s">0</span></div>
               <div class="stat-label" style="color: var(--text-secondary);">Median settlement time</div>
             </div>
           </div>
@@ -472,22 +503,26 @@
         <div class="card reveal" data-delay="1" style="align-items: flex-start; text-align: left;">
           <span class="icon-tile"><i class="ph ph-lock-key"></i></span>
           <h4 class="mb-3">End-to-end encryption</h4>
-          <p style="font-size: var(--body-small);">Data is encrypted in transit and at rest with AES-256 and rotating keys.</p>
+          <p style="font-size: var(--body-small);">Data is encrypted in transit and at rest with AES-256 and rotating
+            keys.</p>
         </div>
         <div class="card reveal" data-delay="2" style="align-items: flex-start; text-align: left;">
           <span class="icon-tile accent"><i class="ph ph-fingerprint"></i></span>
           <h4 class="mb-3">Biometric access</h4>
-          <p style="font-size: var(--body-small);">Face ID and fingerprint unlock, with hardware-key support for high-value moves.</p>
+          <p style="font-size: var(--body-small);">Face ID and fingerprint unlock, with hardware-key support for
+            high-value moves.</p>
         </div>
         <div class="card reveal" data-delay="3" style="align-items: flex-start; text-align: left;">
           <span class="icon-tile"><i class="ph ph-shield-warning"></i></span>
           <h4 class="mb-3">Fraud monitoring</h4>
-          <p style="font-size: var(--body-small);">Behavioural models watch every transaction and hold anything anomalous.</p>
+          <p style="font-size: var(--body-small);">Behavioural models watch every transaction and hold anything
+            anomalous.</p>
         </div>
         <div class="card reveal" data-delay="4" style="align-items: flex-start; text-align: left;">
           <span class="icon-tile accent"><i class="ph ph-bank"></i></span>
           <h4 class="mb-3">Safeguarded funds</h4>
-          <p style="font-size: var(--body-small);">Balances sit in ring-fenced accounts at partner banks, never lent out.</p>
+          <p style="font-size: var(--body-small);">Balances sit in ring-fenced accounts at partner banks, never lent
+            out.</p>
         </div>
       </div>
 
@@ -517,9 +552,12 @@
             <div class="quote-card">
               <div>
                 <div class="stars mb-4">★★★★★</div>
-                <p class="quote-text">The virtual cards changed how I run my business. Every subscription gets its own card with its own limit, and I can kill any of them the second a trial ends.</p>
+                <p class="quote-text">The virtual cards changed how I run my business. Every subscription gets its own
+                  card with its own limit, and I can kill any of them the second a trial ends.</p>
                 <div class="quote-author">
-                  <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=facearea&facepad=3&w=160&h=160&q=80" alt="Sarah Jenkins">
+                  <img
+                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=facearea&facepad=3&w=160&h=160&q=80"
+                    alt="Sarah Jenkins">
                   <div>
                     <div class="quote-name">Sarah Jenkins</div>
                     <div class="quote-role">Freelance Designer · Lisbon</div>
@@ -533,9 +571,12 @@
             <div class="quote-card">
               <div>
                 <div class="stars mb-4">★★★★★</div>
-                <p class="quote-text">We moved payroll for 40 contractors across nine countries onto FINTECH. What used to be a two-day reconciliation is now a single batch upload and a coffee.</p>
+                <p class="quote-text">We moved payroll for 40 contractors across nine countries onto FINTECH. What used
+                  to be a two-day reconciliation is now a single batch upload and a coffee.</p>
                 <div class="quote-author">
-                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=facearea&facepad=3&w=160&h=160&q=80" alt="Marcus Rivera">
+                  <img
+                    src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=facearea&facepad=3&w=160&h=160&q=80"
+                    alt="Marcus Rivera">
                   <div>
                     <div class="quote-name">Marcus Rivera</div>
                     <div class="quote-role">Head of Operations · Austin</div>
@@ -549,9 +590,12 @@
             <div class="quote-card">
               <div>
                 <div class="stars mb-4">★★★★★</div>
-                <p class="quote-text">I'm on a plane most weeks. Zero foreign exchange fees has saved me more than a thousand dollars this year, and the app is genuinely beautiful to use.</p>
+                <p class="quote-text">I'm on a plane most weeks. Zero foreign exchange fees has saved me more than a
+                  thousand dollars this year, and the app is genuinely beautiful to use.</p>
                 <div class="quote-author">
-                  <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=facearea&facepad=3&w=160&h=160&q=80" alt="Emily Hartley">
+                  <img
+                    src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=facearea&facepad=3&w=160&h=160&q=80"
+                    alt="Emily Hartley">
                   <div>
                     <div class="quote-name">Emily Hartley</div>
                     <div class="quote-role">Marketing Director · Singapore</div>
@@ -564,9 +608,11 @@
         </div>
 
         <div class="carousel-controls">
-          <button class="car-btn" type="button" data-car-prev aria-label="Previous testimonial"><i class="ph ph-arrow-left"></i></button>
+          <button class="car-btn" type="button" data-car-prev aria-label="Previous testimonial"><i
+              class="ph ph-arrow-left"></i></button>
           <div class="car-dots"></div>
-          <button class="car-btn" type="button" data-car-next aria-label="Next testimonial"><i class="ph ph-arrow-right"></i></button>
+          <button class="car-btn" type="button" data-car-next aria-label="Next testimonial"><i
+              class="ph ph-arrow-right"></i></button>
         </div>
       </div>
     </div>
@@ -579,9 +625,10 @@
         <div class="split-copy reveal reveal-left">
           <span class="eyebrow"><i class="ph ph-question"></i> Questions</span>
           <h2 class="mb-5">Everything you wanted to ask</h2>
-          <p class="mb-8">Still unsure about something? Our support team answers in under four minutes, around the clock.</p>
+          <p class="mb-8">Still unsure about something? Our support team answers in under four minutes, around the
+            clock.</p>
           <div class="media media-3-2">
-            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=900&q=80" alt="Support team at work in a modern office" loading="lazy">
+            <img src="assets/images/faq-support-team.jpg" alt="Support team at work in a modern office" loading="lazy">
           </div>
         </div>
 
@@ -591,9 +638,13 @@
               How long does an international transfer take?
               <span class="acc-icon"><i class="ph ph-plus"></i></span>
             </button>
-            <div class="acc-body"><div class="acc-body-inner">
-              Transfers between FINTECH accounts settle instantly — typically under two seconds. Payouts to external bank accounts land the same day in 38 countries on local rails, and within one business day everywhere else.
-            </div></div>
+            <div class="acc-body">
+              <div class="acc-body-inner">
+                Transfers between FINTECH accounts settle instantly — typically under two seconds. Payouts to external
+                bank accounts land the same day in 38 countries on local rails, and within one business day everywhere
+                else.
+              </div>
+            </div>
           </div>
 
           <div class="acc-item">
@@ -601,9 +652,12 @@
               What exchange rate do you use?
               <span class="acc-icon"><i class="ph ph-plus"></i></span>
             </button>
-            <div class="acc-body"><div class="acc-body-inner">
-              The real mid-market rate — the same one you'd find on a public rate feed — with no spread added on top. Any fee that applies is shown as a separate line before you confirm, never folded into the rate.
-            </div></div>
+            <div class="acc-body">
+              <div class="acc-body-inner">
+                The real mid-market rate — the same one you'd find on a public rate feed — with no spread added on top.
+                Any fee that applies is shown as a separate line before you confirm, never folded into the rate.
+              </div>
+            </div>
           </div>
 
           <div class="acc-item">
@@ -611,9 +665,13 @@
               Is my money actually safe?
               <span class="acc-icon"><i class="ph ph-plus"></i></span>
             </button>
-            <div class="acc-body"><div class="acc-body-inner">
-              Customer balances are held in ring-fenced safeguarding accounts at tier-1 partner banks and are never used for lending or investment. Access is protected by biometric authentication, and every transaction passes through real-time fraud screening.
-            </div></div>
+            <div class="acc-body">
+              <div class="acc-body-inner">
+                Customer balances are held in ring-fenced safeguarding accounts at tier-1 partner banks and are never
+                used for lending or investment. Access is protected by biometric authentication, and every transaction
+                passes through real-time fraud screening.
+              </div>
+            </div>
           </div>
 
           <div class="acc-item">
@@ -621,9 +679,13 @@
               What does it cost to open an account?
               <span class="acc-icon"><i class="ph ph-plus"></i></span>
             </button>
-            <div class="acc-body"><div class="acc-body-inner">
-              Nothing. The Standard plan is free forever and includes free peer-to-peer transfers, a physical debit card and budgeting tools. Premium adds unlimited virtual cards and zero foreign exchange fees for $9.99 a month.
-            </div></div>
+            <div class="acc-body">
+              <div class="acc-body-inner">
+                Nothing. The Standard plan is free forever and includes free peer-to-peer transfers, a physical debit
+                card and budgeting tools. Premium adds unlimited virtual cards and zero foreign exchange fees for $9.99
+                a month.
+              </div>
+            </div>
           </div>
 
           <div class="acc-item">
@@ -631,9 +693,12 @@
               Can I use FINTECH for my company?
               <span class="acc-icon"><i class="ph ph-plus"></i></span>
             </button>
-            <div class="acc-body"><div class="acc-body-inner">
-              Yes. Business accounts add multi-user roles, granular spend permissions, batch payouts to up to 1,000 recipients at a time, and one-click exports to the major accounting platforms.
-            </div></div>
+            <div class="acc-body">
+              <div class="acc-body-inner">
+                Yes. Business accounts add multi-user roles, granular spend permissions, batch payouts to up to 1,000
+                recipients at a time, and one-click exports to the major accounting platforms.
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -644,7 +709,8 @@
   <section class="section">
     <div class="container">
       <div class="cta-band reveal reveal-scale">
-        <span class="chip accent mb-6" style="background: rgba(52,211,153,.16); border-color: rgba(52,211,153,.3); color: #6EE7B7;">
+        <span class="chip accent mb-6"
+          style="background: rgba(52,211,153,.16); border-color: rgba(52,211,153,.3); color: #6EE7B7;">
           <span class="live-dot"></span> Takes about 3 minutes
         </span>
         <h2 class="mb-5">Ready to take control of your money?</h2>
@@ -652,7 +718,8 @@
           Join more than a million people who've already moved to an account that tells them the truth about fees.
         </p>
         <div class="btn-group" style="justify-content: center;">
-          <a href="register.html" class="btn btn-light btn-lg">Create your free account <i class="ph ph-arrow-right"></i></a>
+          <a href="register.html" class="btn btn-light btn-lg">Create your free account <i
+              class="ph ph-arrow-right"></i></a>
           <a href="pricing.html" class="btn btn-on-ink btn-lg">Compare plans</a>
         </div>
         <p class="cta-note mt-8">No credit check · No monthly minimum · Cancel any time</p>
@@ -668,7 +735,8 @@
           <a href="index.html" class="footer-logo">
             <span class="logo-mark"><i class="ph-fill ph-lightning"></i></span> FINTECH
           </a>
-          <p style="max-width: 320px;">Modern financial tools for the borderless economy. Secure, fast, and honest about pricing.</p>
+          <p style="max-width: 320px;">Modern financial tools for the borderless economy. Secure, fast, and honest about
+            pricing.</p>
           <div class="footer-social">
             <a href="#" aria-label="X"><i class="ph ph-x-logo"></i></a>
             <a href="#" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
@@ -705,7 +773,9 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p class="footer-disclosure">FINTECH is a placeholder financial services brand created for demonstration purposes. It is not a real financial institution, and all rates, figures, licences and tools shown on this site are illustrative only.</p>
+        <p class="footer-disclosure">FINTECH is a placeholder financial services brand created for demonstration
+          purposes. It is not a real financial institution, and all rates, figures, licences and tools shown on this
+          site are illustrative only.</p>
         <p>&copy; 2026 FINTECH Payments. All rights reserved.</p>
       </div>
     </div>
@@ -715,4 +785,5 @@
 
   <script src="assets/js/main.js"></script>
 </body>
+
 </html>
