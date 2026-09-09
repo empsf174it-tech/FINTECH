@@ -1202,6 +1202,10 @@ svg { display: block; }
 .stat-plain .stat-num, .stat-num.stat-plain { background: var(--grad-text); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
 .stat-plain .stat-label { color: var(--text-secondary); }
 
+/* Logo strip sits under the hero; it needs air above so it does not read as
+   part of the hero band. */
+.trusted-by { padding-top: var(--spacing-16); padding-bottom: var(--spacing-12); }
+
 /* --------------------------------------------------------------------------
    11. Logo marquee
    -------------------------------------------------------------------------- */
@@ -1532,6 +1536,7 @@ svg { display: block; }
   flex: 1;
   padding: var(--spacing-5) var(--spacing-5) var(--spacing-6);
   border-top: 1px solid var(--border);
+  text-align: center;
 }
 .team-overlay h4 { color: var(--text-primary); margin-bottom: 2px; }
 .team-role { font-size: var(--body-small); color: var(--accent); font-weight: 600; }
@@ -1541,7 +1546,8 @@ svg { display: block; }
   line-height: 1.55;
   margin-top: var(--spacing-3);
 }
-.team-socials { display: flex; gap: var(--spacing-2); margin-top: auto; padding-top: var(--spacing-5); }
+/* Flex row, so it needs its own centring even though the card centres text. */
+.team-socials { display: flex; justify-content: center; gap: var(--spacing-2); margin-top: auto; padding-top: var(--spacing-5); }
 .team-socials a {
   width: 34px; height: 34px;
   border-radius: 50%;
@@ -1954,19 +1960,24 @@ textarea.form-control { resize: vertical; min-height: 120px; }
    21. Pricing
    -------------------------------------------------------------------------- */
 /* overflow must stay visible so the "Most popular" badge can sit above the card edge */
-.pricing-card { position: relative; padding: var(--spacing-10); overflow: visible; }
+.pricing-card { position: relative; --card-pad: var(--spacing-10); padding: var(--card-pad); overflow: visible; }
 /* ...which means the hover hairline has to round its own top corners */
 .pricing-card::before { border-radius: var(--radius-lg) var(--radius-lg) 0 0; }
+/* Two things keep this column's rows level with the plain card beside it:
+   - its gradient border is 1px thicker, so the padding gives that pixel back;
+     without it the price, the CTA and every feature row sit a pixel low.
+   - no transform lift. .reveal.in resets transform, so a lift declared here
+     only ever applied *before* the card revealed, which left the two columns
+     32px out of step for the length of the fade-in. */
 .pricing-card.featured {
   border-color: transparent;
   background:
     linear-gradient(var(--bg-card), var(--bg-card)) padding-box,
     var(--grad-primary) border-box;
   border: 2px solid transparent;
+  padding: calc(var(--card-pad) - 1px);
   box-shadow: var(--shadow-md);
-  transform: translateY(-6px);
 }
-.pricing-card.featured:hover { transform: translateY(-12px); }
 .pricing-card.featured::before { display: none; }
 .pricing-badge {
   position: absolute;
@@ -2185,7 +2196,7 @@ textarea.form-control { resize: vertical; min-height: 120px; }
   .stat-band { padding: var(--spacing-10) var(--spacing-6); }
   .quote-card { padding: var(--spacing-8); }
   .contact-form-container { padding: var(--spacing-6); }
-  .pricing-card { padding: var(--spacing-6); }
+  .pricing-card { --card-pad: var(--spacing-6); }
   .auth-card { padding: var(--spacing-8) var(--spacing-6); }
   /* Paired cards stay side by side rather than collapsing. */
   .pair-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--spacing-4); }
